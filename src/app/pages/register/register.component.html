@@ -1,0 +1,40 @@
+<body  style="background-image: url('assets/image/signbg.jpg');  background-position: center;
+background-repeat: no-repeat;
+background-size: cover; margin-left: 250px; margin-right: 250px; height: 600px;" >
+  
+
+
+<div class="row">
+    <div class="col-lg-3" >
+
+    </div>
+    <div class="col-lg-6">
+
+     <form #form="ngForm" (ngSubmit)="onSubmit(form.value)">
+      <h1 style="text-align: center;"> Sign Up</h1>
+      <p style="text-align:center;"> Fill This Form To Create An Account.</p>
+      <hr>
+  
+      <label for="email"><b>Email</b></label>
+      <input  class="form-control"  type="email" placeholder="Enter Email" name="email" required ngModel>
+  
+      <label for="password"><b>Password</b></label>
+      <input  class="form-control" type="password" placeholder="Enter Password" name="password" required ngModel>
+  
+      <label for="password-repeat"><b>Repeat Password</b></label>
+      <input class="form-control" type="password" placeholder="Repeat Password" name="password-repeat" required ngModel>
+  
+      <label>
+        <input class="form-control" type="checkbox" checked="checked" name="remember" style="margin-bottom:15px" ngModel> Remember me
+      </label>
+  
+     
+        <button type="submit" class="signupbtn">Sign Up</button>
+      
+    
+  </form>>
+
+</div>
+</div>
+  
+</body>

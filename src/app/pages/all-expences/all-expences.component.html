@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<style>
+body {
+  background-image: url('assets/image/catBG.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+  height: 720px;
+}
+</style>
+<body>
+
+
+
+
+
+<div class="container">
+    <br><br>
+       
+    
+    <div class="card">
+        <div class="card-body">
+     <h3 style="float: left;">All Expences</h3>
+
+     <a routerLink="/add-expences" style="float: right;"><i class="fa fa-plus-circle fa-2x"></i></a>
+    </div>
+ </div>
+
+    <br><br>
+    <table class="table table-responsive table-striped">
+        <thead>
+            <tr> <th>Category</th>
+                <th>Expence Date</th>
+                <th>Amount</th>
+                <th>Action</th> 
+            </tr> 
+        </thead>
+        <tbody >
+            <tr *ngFor="let expence of expences"> <td>{{expence.data.category }}</td>
+                <td>{{expence.data.timestamp.seconds*1000 | date}}</td>
+                <td>{{expence.data.ammount}}</td>
+               <td>
+                    <a (click)="deleteExpence(expence.id)"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                    <a class="mx-2" style="color: black;" (click)="editExpence(expence)"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                </td>
+            </tr>
+            <tr>
+                <td>total</td>
+            <td></td>
+            <td>{{totalAmount}}</td>
+            <td></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

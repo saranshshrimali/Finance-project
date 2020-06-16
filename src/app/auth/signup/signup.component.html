@@ -1,0 +1,40 @@
+<body  style="background-image: url('assets/image/signbg.jpg');  background-position: center;
+background-repeat: no-repeat;
+background-size: cover; margin-left: 250px; margin-right: 250px; height: 600px;" >
+  
+
+
+<div class="row">
+    <div class="col-lg-3">
+
+    </div>
+    <div class="col-lg-6">
+
+      <form>
+      <h1 style="text-align: center;"> Sign Up</h1>
+      <p style="text-align:center;"> Fill This Form To Create An Account.</p>
+      <hr>
+  
+      <label for="email"><b>Email</b></label>
+      <input class="form-control" formControlName="email" type="email" placeholder="Enter Email" name="email" required>
+  
+      <label for="psw"><b>Password</b></label>
+      <input class="form-control" type="password" formControlName="password" placeholder="Enter Password" name="psw" required>
+  
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input class="form-control" type="password"  formControlName="confirmPassword" placeholder="Repeat Password" name="psw-repeat" required>
+  
+      <label>
+        <input class="form-control" type="checkbox" checked="checked" formControlName='PerFastion' name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+  
+     
+        <button (click)="onSubmit(form.value)" class="signupbtn">Sign Up</button>
+      
+    
+  </form>
+
+</div>
+</div>
+  
+</body>

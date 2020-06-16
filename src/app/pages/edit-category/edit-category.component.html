@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<style>
+body {
+  background-image: url('assets/image/catBG.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+  height: 720px;
+}
+</style>
+<body>
+
+
+
+<br><br><br>
+<div class="container">
+    <div class="row m-3">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                     <h2 class="text-center">Edit Category</h2>
+                     <br>
+                     <input  type="text" class="form-control" [(ngModel)]="item">
+                     <br>
+                     <button class="btn btn-primary" (click)="save()">Change</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+</div>
+
+</body>
+</html>

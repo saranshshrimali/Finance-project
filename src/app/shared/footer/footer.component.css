@@ -1,0 +1,16 @@
+.row
+{
+    background-color: Gray;
+    
+    
+    color:white;
+    padding-bottom: 60px;
+    padding-top: 60px;
+    
+}
+
+.row a
+{
+    color:black;
+    text-decoration: none;
+}
