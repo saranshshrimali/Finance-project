@@ -40,7 +40,7 @@ export class ExpenceService {
 
   
   getAllExpence(){
-    console.log(firebase.auth().currentUser.uid);
+   // console.log(firebase.auth().currentUser.uid);
     return new Promise<any>((resolve) => {
       let data=[]
      firebase.firestore().collection("user").doc(firebase.auth().currentUser.uid).collection("expence").onSnapshot(
@@ -72,7 +72,7 @@ export class ExpenceService {
     return new Promise<any>((resolve) => { 
        firebase.firestore().collection("user").doc(firebase.auth().currentUser.uid).collection("expence").doc(id).onSnapshot(
       (item: any) => {
-        item.forEach(element => {
+        (element => {
           let data =element.data();
           resolve(data)
     })

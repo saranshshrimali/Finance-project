@@ -17,7 +17,10 @@ export class EditExpencesComponent implements OnInit {
   selected = 'Select Category';
   ammount
   constructor(public expenceService:ExpenceService,public route:ActivatedRoute,public categoryService:CategoryServiceService,
-    public router:Router) { }
+    public router:Router) {
+      this.getUserCategories();
+      console.log(this.categories);
+     }
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
@@ -40,6 +43,7 @@ export class EditExpencesComponent implements OnInit {
     this.categoryService.getAllCategory().then(res=>{
      res.items.forEach(element => {
        this.categories.push(element)
+       console.log(this.categories);
      });
     })
   }
@@ -48,7 +52,7 @@ export class EditExpencesComponent implements OnInit {
   }
   save(){
     let data={
-      ammount:this.expence.ammount,
+      ammount:this.ammount,
       category:this.selected
 
     };

@@ -1,3 +1,16 @@
+<!DOCTYPE html>
+<html>
+<style>
+body {
+  background-image: url('assets/image/catBG.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+  height: 720px;
+}
+</style>
+<body>
+
 <br><br><br>
 <div class="container">
     <div class="row m-3">
@@ -9,14 +22,14 @@
                      <br>
                      <h5>Select Category</h5>
                      <!-- <input type="text" class="form-control" [(ngModel)]="expence.category"> -->
-                     <select style="margin-left: 50px; background-color:#FFF !important; " [ngModel]="selected" (ngModelChange)="onChange($event)">
+                     <select  class="form-control" style="background-color:#FFF !important; " [(ngModel)]="selected" (ngModelChange)="onChange($event)">
                         <option [value]="option.data.name" *ngFor="let option of categories; let i = index;" >
                               {{option.data.name}}
                         </option>
                   </select>
                      <br>
                      <h5>Enter Amount</h5>
-                     <input type="number" class="form-control" placeholder="Enter Amount" [(ngModel)]="expence.amount">
+                     <input type="number" class="form-control" placeholder="Enter Amount" [(ngModel)]="ammount">
                      <br>
 
                      <button class="btn btn-primary" (click)="save()">Change</button>
@@ -26,3 +39,5 @@
         <div class="col-lg-3"></div>
     </div>
 </div>
+</body>
+</html>
